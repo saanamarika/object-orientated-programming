@@ -14,6 +14,7 @@ namespace TaskPerson
             personSaana.GrowOld();
             Console.WriteLine($"Saanan ikä: {personSaana.GetAge()}");
             personSaana.GrowOld(50);
+
             personSaana.PrintPersonInfo();
 
 
