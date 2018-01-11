@@ -26,6 +26,10 @@ namespace TaskPerson
         {
             this.age++;
         }
+        public void GrowOld(int number)
+        {
+            this.age = this.age + number;
+        }
 
         public void PrintPersonInfo()
         {
