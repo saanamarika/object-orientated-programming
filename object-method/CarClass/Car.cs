@@ -30,7 +30,7 @@ namespace CarClass
         public void Accelerate()
         {
             double Speed1 =Speed* 1.5;
-            Console.WriteLine($"Autosi parannettu nopeus olisi: {Speed1}\n");
+            Console.WriteLine($"Autosi parannettu nopeus olisi: {Speed1}");
         }
         public void Brake()
         {
