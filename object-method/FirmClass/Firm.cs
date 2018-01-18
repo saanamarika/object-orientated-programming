@@ -46,13 +46,13 @@ namespace FirmClass
         {
             int win = (Outcome - Expense) / Expense * 100;
             Console.WriteLine($"Firman voitto%: {win}");
-            if (win < 100)
+            if (win < 100&&win>0)
                 Console.WriteLine("Firmalla menee helevetin huonosti.\n");
-            if (win >= 100 && win < 200&&win>0)
+            else if (win >= 100 && win < 200&&win>0)
                 Console.WriteLine("Firmalla menee kehnosti.\n");
-            if (win >= 200 && win < 300)
+            else if (win >= 200 && win < 300)
                 Console.WriteLine("Firmalla menee tyydyttävästi.\n");
-            if (win >= 300)
+            else if (win >= 300)
                 Console.WriteLine("Firmalla menee todella hyvin!\n");
             else
                 Console.WriteLine("Firmalla menee niin huonosti, että koodikin sekoaa...");

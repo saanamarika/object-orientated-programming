@@ -11,9 +11,13 @@ namespace FirmClass
             firm.printInfo();
             firm.howIsGoing();
 
-            Firm firm2 = new Firm("Hauki", "Järvikatu 23", "023 2345", 230500, 123000);
+            Firm firm2 = new Firm("Hauki", "Järvikatu 23", "023 2345", 230500, 95300);
             firm2.printInfo();
             firm2.howIsGoing();
+
+            Firm firm3 = new Firm(firm2);
+            firm3.printInfo();
+            firm3.howIsGoing();
 
             Console.ReadKey();
         }
