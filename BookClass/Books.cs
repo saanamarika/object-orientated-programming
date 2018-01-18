@@ -35,6 +35,7 @@ namespace BookClass
         //Tässä on se vertailu mikä vain kutsutaan pääohjelmassa
         public string BookPrices(Books books)
         {
+
             if (this.Price < books.Price)
                 return ($"Kirja {this.Title} on edullisempi kuin {books.Title}\n");
             return ($"Kirja {this.Title} on kalliimpi kuin {books.Title}\n");
