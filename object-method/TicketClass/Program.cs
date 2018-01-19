@@ -16,6 +16,10 @@ namespace TicketClass
             ticket2.PrintUserInfo();
             ticket2.CountDiscount();
 
+            Ticket ticket3 = new Ticket("Anselmi", 6, "N", "N", "N");
+            ticket3.PrintUserInfo();
+            ticket3.CountDiscount();
+
             Console.ReadKey();
         }
     }

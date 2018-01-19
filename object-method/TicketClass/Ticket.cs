@@ -9,9 +9,9 @@ namespace TicketClass
         //Fields
         public string User;
         public int Age;
-        public string Member;
-        public string Member2;
-        public string Member3;
+        public string Student;
+        public string Army;
+        public string Mtk;
         public int Price;
         public int Discount;
         public decimal EndPrice;
@@ -20,20 +20,20 @@ namespace TicketClass
         {
             User = "";
             Age = 0;
-            Member = "";
-            Member2 = "";
-            Member3 = "";
-            Price = 20;
+            Student = "";
+            Army = "";
+            Mtk = "";
+            Price = 0;
             Discount = 0;
             EndPrice = 0;
         }
-        public Ticket(string user, int age, string member,string member2,string member3)
+        public Ticket(string user, int age, string student,string army,string mtk)
         {
             User = user;
             Age = age;
-            Member = member;
-            Member2 = member3;
-            Member3 = member3;
+            Student = student;
+            Army = army;
+            Mtk = mtk;
             //Price = price;
         }
         public void AskData()
@@ -43,15 +43,15 @@ namespace TicketClass
             Console.Write("Ikä: ");
             Age = int.Parse(Console.ReadLine());
             Console.Write("Oletko opiskelija? Y/N: ");
-            Member = Console.ReadLine();
+            Student = Console.ReadLine();
             Console.Write("Oletko varusmies? Y/N: ");
-            Member2 = Console.ReadLine();
+            Army = Console.ReadLine();
             Console.Write("Oletko mtk:n jäsen? Y/N: ");
-            Member3 = Console.ReadLine();
+            Mtk = Console.ReadLine();
         }
         public void PrintUserInfo()
         {
-            Console.WriteLine($"Nimi: {User}\nIkä: {Age}\nOpiskelija: {Member}\nVarusmies: {Member2}\nMtk:n jäsen: {Member3}\n");
+            Console.WriteLine($"Nimi: {User}\nIkä: {Age}\nOpiskelija: {Student}\nVarusmies: {Army}\nMtk:n jäsen: {Mtk}\n");
         }
         public void CountDiscount()
         {
@@ -62,8 +62,8 @@ namespace TicketClass
                 Discount = 50;
             else if (Age >= 65)
                 Discount = 50;
-            else if (Member == "Y" || Member == "y")
-                if (Member == "Y" && Member3 == "Y" || Member == "Y" && Member3 == "Y")
+            else if (Student == "Y" || Student == "y")
+                if (Student == "Y" && Mtk == "Y" || Student == "Y" && Mtk == "Y")
                 {
                     Discount = 45 + 15;
                 }
@@ -71,9 +71,9 @@ namespace TicketClass
                 {
                     Discount = 45;
                 }
-            else if (Member2 == "Y" || Member2 == "y")
+            else if (Army == "Y" || Army == "y")
                 Discount = 50;
-            else if (Member3 == "Y" || Member3 == "y")
+            else if (Mtk == "Y" || Mtk == "y")
                 Discount = 15;
             else
                 Discount = 0;
