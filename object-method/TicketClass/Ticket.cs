@@ -36,6 +36,11 @@ namespace TicketClass
             Mtk = mtk;
             //Price = price;
         }
+        public Ticket(Ticket previousData)
+        {
+            User = previousData.User;
+
+        }
         public void AskData()
         {
             Console.Write("Nimi: ");
