@@ -20,6 +20,10 @@ namespace TicketClass
             ticket3.PrintUserInfo();
             ticket3.CountDiscount();
 
+            Ticket ticket4 = new Ticket(ticket3);
+            ticket4.PrintUserInfo();
+            ticket4.CountDiscount();
+
             Console.ReadKey();
         }
     }

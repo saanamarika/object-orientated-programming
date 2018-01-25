@@ -39,7 +39,10 @@ namespace TicketClass
         public Ticket(Ticket previousData)
         {
             User = previousData.User;
-
+            Age = previousData.Age;
+            Student = previousData.Student;
+            Army = previousData.Army;
+            Mtk = previousData.Army;
         }
         public void AskData()
         {
