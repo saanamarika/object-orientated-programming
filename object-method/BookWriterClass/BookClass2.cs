@@ -6,25 +6,45 @@ namespace BookWriterClass
 {
     class BookClass2
     {
-        public string Name;
-        public string Author;
+        private string _name;
+        private string _author;
         public string Publisher;
-        public double Price;
-        public static string ThemeName;
+        private double _price;
+        private static string _themeName;
 
+        public static string ThemeName { get => _themeName; set => _themeName = value; }
+        public string Name
+        {
+            get => _name;
+
+            //set => _name = value;
+        }
+        public double Price
+        {
+            get => _price;
+            set
+            {
+                _price = value;
+                if (value > 30)
+                    _price *= 0.90;
+            }
+        }
+
+        public string Author { get => _author; }
+        //set => _author = value; }
 
         public BookClass2()
         {
-            Name = "";
-            Author = "";
+            _name = "";
+            _author = "";
             Publisher = "";
             Price = 0;
             ThemeName = "";
         }
         public BookClass2(string name, string author, string publisher, double price, string themename)
         {
-            Name = name;
-            Author = author;
+            _name = name;
+            _author = author;
             Publisher = publisher;
             Price = price;
             ThemeName = themename;
@@ -36,11 +56,28 @@ namespace BookWriterClass
                     $"Kirjan nimi: {Name}\n" +
                     $"Kirjailija: {Author}\n" +
                     $"Julkaisija: {Publisher}\n" +
-                    $"Hinta: {Price}\n" +
+                    $"Hinta: {Price:c2}\n" +
+                    $"Teema: {_themeName}\n" +
                     $"---------------------\n");
             else
                 Console.WriteLine($"Kirjaa {bookName} ei löytynyt.");
         }
+        public static void ChangeTheme(string newThemeName)
+        {
+            _themeName = newThemeName;
+        }
+        public void BookInfo()
+        {
+            Console.WriteLine($"\n"+
+    $"Kirjan nimi: {Name}\n" +
+    $"Kirjailija: {Author}\n" +
+    $"Julkaisija: {Publisher}\n" +
+    $"Hinta: {Price:c2}\n" +
+    $"Teema: {_themeName}\n" +
+    $"---------------------\n");
+        }
+
+
 
         //1. Ohjelma, jossa määrittelet Kirja-luokan.Kirja-luokan kentät ovat nimi, kirjailija, kustantaja,
         //hinta sekä teemanNimi, joka on staattinen kenttä.Määrittele luokalle sopivat muodostimet sekä HaeKirja()- ja 
@@ -66,11 +103,6 @@ namespace BookWriterClass
 
 
 
-        //4. Ohjelma, jossa määrittelet Kirjailija-luokan.Kirjailija-luokan kentät ovat string-tyyppiset nimi ja 
-        //syntymäpäivä sekä kirja, jonka tietotyyppi on edellisessä tehtävässä määrittelemäsi Kirja-luokka.
-        //Määrittele luokalle sopivat muodostimet sekä TulostaTiedot()-metodi, joka tulostaa kirjailijan tiedot. 
-        //(Muista, että kirjailijan tiedot sisältävät myös kirjan tiedot.Luo Main()-metodissa olioita Kirjailija-luokasta 
-        //ja kutsu TulostaTiedot()-metodi.
 
 
 
