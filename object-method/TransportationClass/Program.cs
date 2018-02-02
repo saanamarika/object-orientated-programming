@@ -13,8 +13,10 @@ namespace TransportationClass
             CarClass Trans2 = new CarClass("Auto", "Ford Focus", "2006", 13000, "V2", "BKV", 5);
             //Console.WriteLine(Trans2.TransporterInfo());
             Console.WriteLine(Trans2.ToString());
+            CarClass Trans3 = new CarClass("Auto", "BMW X5", "2017", 65000, "V8", "BBA", 3);
+            Console.WriteLine(Trans3.ToString());
 
-            Trans1.Equals(Trans2);
+            Console.WriteLine($"Onko {Trans2.Model} halvempi kuin {Trans3.Model}? Vastaus: {Trans2.Equals(Trans3)}");
 
             Console.ReadKey();
         }

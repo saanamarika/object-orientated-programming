@@ -26,6 +26,14 @@ namespace TransportationClass
                 $"Hinta: {Price:c2}\n" +
                 $"-----------------------\n";
         }
+        public override bool Equals(object obj)
+        {
+            if (Price < ((Transportation)obj).Price)
+                return true;
+            else
+                return false;
+
+        }
 
         // 3. Muuta Kulku Väline-luokka abstraktiksi ja tee tarvittavat muutokset, jotta sen periytyminen onnistuisi.
 
