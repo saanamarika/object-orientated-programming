@@ -37,9 +37,6 @@ namespace TransportationClass
 
         // 3. Muuta Kulku Väline-luokka abstraktiksi ja tee tarvittavat muutokset, jotta sen periytyminen onnistuisi.
 
-        // 4. Kehitä edelleen ohjelmaasi siten, että luot KuormaAuto-luokan, joka perii Auto-luokan.Määrittele luokalle 
-        // seuraavat kentät: kuormanPaino ja kulutusPerKg.Määrittele luokalle LaskeKulutus(), joka laskee polttoaineen 
-        // kulutuksen ja palauttaa sen.Luo Main()metodissa myös KuormaAuto-olioita ja suorita tyyppimuunnokset Auto- ja 
-        // KuormaAuto-olioiden välillä,
+
     }
 }

@@ -23,7 +23,7 @@ namespace TransportationClass
                 $"Malli: {Model}\n" +
                 $"Vuosimalli: {Year}\n" +
                 $"Hinta: {Price:c2}\n" +
-                $"Moottori: {Engine}\n" +
+                $"Moottorin koko: {Engine}\n" +
                 $"Moottorin malli: {Model2}\n" +
                 $"Ovien lkm: {Doors}\n" +
                 $"--------------------\n";

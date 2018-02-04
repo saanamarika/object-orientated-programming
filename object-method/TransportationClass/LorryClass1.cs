@@ -9,11 +9,29 @@ namespace TransportationClass
         public double Weight;
         public double PerKg;
 
+
         public LorryClass1(string type, string model, string year, double price, string engine, string model2, int doors,double weight,double perkg) : base(type, model, year, price, engine, model2, doors)
         {
             Weight = weight;
             PerKg = perkg;
         }
+        public override string TransporterInfo()
+        {
+            return $"Kulkuväline: {Type}\n" +
+                $"Malli: {Model}\n" +
+                $"Vuosimalli: {Year}\n" +
+                $"Hinta: {Price:c2}\n" +
+                $"Moottorin koko: {Engine}\n" +
+                $"Moottorin malli: {Model2}\n" +
+                $"Ovien lkm: {Doors}\n" +
+                $"Paino: {Weight}\n"+
+                $"Kulutus per/kg: {PerKg}\n"+
+                $"--------------------\n";
+        }
 
+        // 4. Kehitä edelleen ohjelmaasi siten, että luot KuormaAuto-luokan, joka perii Auto-luokan.Määrittele luokalle 
+        // seuraavat kentät: kuormanPaino ja kulutusPerKg.Määrittele luokalle LaskeKulutus(), joka laskee polttoaineen 
+        // kulutuksen ja palauttaa sen.Luo Main()metodissa myös KuormaAuto-olioita ja suorita tyyppimuunnokset Auto- ja 
+        // KuormaAuto-olioiden välillä,
     }
 }
