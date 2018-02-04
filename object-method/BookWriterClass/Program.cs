@@ -16,17 +16,17 @@ namespace BookWriterClass
             BookClass2 book2 = new BookClass2("Haisuli", "Muumipeikko", "Tiivitaavi", 30.95, "Lapsi");
             //book2.GetBook("Haisuli");
 
-            //BookClass2 book3 = new BookClass2("Koodari", "Jouni", "Saimia", 49.90, "Tietsikka");
+            BookClass2 book3 = new BookClass2("Koodari", "Jouni", "Saimia", 49.90, "Tietsikka");
 
-            //book3.GetBook("Koodari");
+            book3.GetBook("XXX");
 
             BookClass2.ChangeTheme("Kauhu");
             //seuraavissa testattu teeman vaihto
             //book.GetBook("Olio");
             book2.GetBook("Haisuli");
             //Seuraavaksi testattu author-luokan toimintaa
-            Author kirjailija = new Author("Pekka", "19.7.1989", book);
-            kirjailija.AuthorInfo();
+            Author kirjailija = new Author("Naadenin seikkailut","Pekka","Saanis",500,"Pieru","Pekka","19.07.1989");
+            kirjailija.GetBook("Naadenin seikkailut");
             Console.ReadKey();
         }
     }

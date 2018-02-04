@@ -5,32 +5,33 @@ using Literature;
 
 namespace BookWriterClass
 {
-    class Author
+    //harjoituksen vuoksi muutin tämänkin periytyväksi, koska häiritsi, että kirjailija oli eri kuin mitä tähän tuli.
+    class Author : BookClass2
     {
         public string Author2;
         public string Birthday;
-        public BookClass2 Bc2;
 
-        public Author()
-        {
-            Author2 = "";
-            Birthday = "";
-            Bc2 = new BookClass2();
-        }
-
-        public Author(string author2, string birthday, BookClass2 book)
+        public Author(string name, string author, string publisher, double price, string themename, string author2, string birthday) : base(name, author, publisher, price, themename)
         {
             Author2 = author2;
             Birthday = birthday;
-            Bc2 = book;
         }
-        public void AuthorInfo()
+
+        public override void GetBook(string bookName)
         {
-            Console.Write($"Kirjailija: {Author2}\n" +
-                $"Syntymäpäivä: {Birthday}\n" +
-                $"Kirjoittanut kirjan: ");
-            Bc2.BookInfo();
+            if (Name == bookName)
+                Console.WriteLine($"Kirja {bookName} löytyi!\n" +
+                    $"Kirjan nimi: {Name}\n" +
+                    $"Kirjailija: {Author2}\n" +
+                    $"Syntynyt: {Birthday}\n" +
+                    $"Julkaisija: {Publisher}\n" +
+                    $"Hinta: {Price:c2}\n" +
+                    $"Teema: {ThemeName}\n" +
+                    $"---------------------\n");
+            else
+                Console.WriteLine($"Kirjaa {bookName} ei löytynyt.\n");
         }
+
 
 
 

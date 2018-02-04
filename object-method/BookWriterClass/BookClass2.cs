@@ -49,10 +49,10 @@ namespace Literature
             Price = price;
             ThemeName = themename;
         }
-        public void GetBook(string bookName)
+        public virtual void GetBook(string bookName)
         {
             if (Name == bookName)
-                Console.WriteLine($"Kirja {Name} löytyi!\n" +
+                Console.WriteLine ($"Kirja {bookName} löytyi!\n" +
                     $"Kirjan nimi: {Name}\n" +
                     $"Kirjailija: {Author}\n" +
                     $"Julkaisija: {Publisher}\n" +
@@ -60,7 +60,7 @@ namespace Literature
                     $"Teema: {_themeName}\n" +
                     $"---------------------\n");
             else
-                Console.WriteLine($"Kirjaa {bookName} ei löytynyt.");
+               Console.WriteLine ($"Kirjaa {bookName} ei löytynyt.\n");
         }
         public static void ChangeTheme(string newThemeName)
         {
