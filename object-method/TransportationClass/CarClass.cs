@@ -10,15 +10,27 @@ namespace TransportationClass
         public string Model2;
         public int Doors;
 
+
         public CarClass(string type, string model, string year, double price, string engine, string model2, int doors) : base(type, model, year, price)
         {
             Engine = engine;
             Model2 = model2;
             Doors = doors;
         }
-        public override string TransporterInfo()
-        {
 
+        public CarClass(string type, string model, string year, double price) : base(type, model, year, price)
+        {
+        }
+
+        //public override string TransporterInfo()
+        //{
+        //    return $"Kulkuväline: {Type}\n" +
+        //        $"Malli: {Model}\n" +
+        //        $"Vuosimalli: {Year}\n" +
+        //        $"Hinta: {Price:c2}\n";
+        //}
+        public virtual string CarInfo()
+        {
             return $"Kulkuväline: {Type}\n" +
                 $"Malli: {Model}\n" +
                 $"Vuosimalli: {Year}\n" +
@@ -26,10 +38,10 @@ namespace TransportationClass
                 $"Moottorin koko: {Engine}\n" +
                 $"Moottorin malli: {Model2}\n" +
                 $"Ovien lkm: {Doors}\n" +
-                $"--------------------\n";
+                $"--------------------\n";        
         }
 
-        public override string ToString()
+    public override string ToString()
         {
             return TransporterInfo();
         }

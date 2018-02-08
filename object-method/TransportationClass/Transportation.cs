@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TransportationClass
 {
-    class Transportation
+    abstract class Transportation
     {
         public string Type;
         public string Model;

@@ -15,7 +15,7 @@ namespace TransportationClass
             Weight = weight;
             PerKg = perkg;
         }
-        public override string TransporterInfo()
+        public override string CarInfo()
         {
             return $"Kulkuväline: {Type}\n" +
                 $"Malli: {Model}\n" +
@@ -26,8 +26,14 @@ namespace TransportationClass
                 $"Ovien lkm: {Doors}\n" +
                 $"Paino: {Weight}\n"+
                 $"Kulutus per/kg: {PerKg}\n"+
+                $"Polttoaineen kulutus/km: {CountCons()}\n"+
                 $"--------------------\n";
         }
+        private double CountCons()
+        {
+            return Weight * PerKg;
+        }
+
 
         // 4. Kehitä edelleen ohjelmaasi siten, että luot KuormaAuto-luokan, joka perii Auto-luokan.Määrittele luokalle 
         // seuraavat kentät: kuormanPaino ja kulutusPerKg.Määrittele luokalle LaskeKulutus(), joka laskee polttoaineen 
